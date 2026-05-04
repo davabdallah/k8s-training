@@ -4,16 +4,6 @@
 
 Enable the Minikube Ingress addon and route HTTP traffic to a Kubernetes Service.
 
-## Estimated Time
-
-70 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
-- Day 2 Service concepts are understood.
 
 ## Step-by-Step Commands
 
