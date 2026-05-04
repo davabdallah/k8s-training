@@ -1,6 +1,6 @@
 # Minikube Setup
 
- Day 1 to verify that all machines are ready.
+ Day 1: to verify that all machines are ready.
 
 ## Required Tools
 
@@ -12,7 +12,7 @@ Install these tools before class:
 - Git
 - VS Code or any editor
 
-If students are using Ubuntu inside WSL 2, install kubectl and Minikube with [WSL Ubuntu tool installation](wsl-ubuntu-install.md) first.
+If you are using Ubuntu inside WSL 2, install kubectl and Minikube with [WSL Ubuntu tool installation](wsl-ubuntu-install.md) first.
 
 ## Verify Tool Installation
 
