@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-content
+data:
+  api: |
+    {"service":"backend","message":"Hello from the backend service","source":"ConfigMap"}
+  index.html: |
+    Backend service is running.
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: busybox:1.36
+          command: ["sh", "-c", "httpd -f -p 8080 -h /www"]
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: backend-content
+              mountPath: /www
+      volumes:
+        - name: backend-content
+          configMap:
+            name: backend-content
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  type: ClusterIP
+  selector:
+    app: backend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
