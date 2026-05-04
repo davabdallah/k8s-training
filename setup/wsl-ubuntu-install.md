@@ -11,11 +11,8 @@ The labs use Docker as the Minikube driver, so Docker must also be available ins
 
 ## Goal
 
-Prepare a WSL Ubuntu machine for the Kubernetes 3-day training.
+Prepare a WSL Ubuntu machine for the Kubernetes training.
 
-## Estimated Time
-
-30 to 45 minutes
 
 ## Prerequisites
 
@@ -52,7 +49,7 @@ Set WSL 2 as the default for future distributions:
 wsl.exe --set-default-version 2
 ```
 
-## 2. Verify Docker from Ubuntu
+## 2. Verify Docker on Ubuntu
 
 Start Docker Desktop on Windows.
 
