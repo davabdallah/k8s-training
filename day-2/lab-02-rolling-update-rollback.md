@@ -4,15 +4,6 @@
 
 Update a Deployment image, observe the rollout, simulate a bad rollout, and roll back to the previous working version.
 
-## Estimated Time
-
-70 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
 
 ## Step-by-Step Commands
 
