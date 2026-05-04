@@ -18,15 +18,15 @@ By the end of Day 1, students should be able to:
 
 Duration: 6 hours
 
-| Time | Topic |
-| --- | --- |
-| 45 min | Minikube setup and cluster verification |
-| 60 min | kubectl inspection workflow |
-| 60 min | Create Pods imperatively |
-| 75 min | Create Pods with YAML |
-| 75 min | Logs, events, and debugging |
-| 60 min | Labels, selectors, and namespaces |
-| 45 min | Review and cleanup |
+| Topic |
+| --- |
+| Minikube setup and cluster verification |
+| kubectl inspection workflow |
+| Create Pods imperatively |
+| Create Pods with YAML |
+| Logs, events, and debugging |
+| Labels, selectors, and namespaces |
+| Review and cleanup |
 
 ## Labs
 
