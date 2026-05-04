@@ -16,7 +16,7 @@ Create a Pod using a kubectl command, inspect it, view logs, and delete it.
 Create a Pod from the `nginx` image:
 
 ```bash
-kubectl run nginx-imperative --image=nginx:1.25-alpine --restart=Never --port=80
+kubectl run web --image=nginx:1.27-alpine --port=80
 ```
 
 List Pods:
@@ -25,34 +25,23 @@ List Pods:
 kubectl get pods
 ```
 
-Wait until the Pod is ready:
+Describe the Pod:
 
 ```bash
-kubectl wait --for=condition=Ready pod/nginx-imperative --timeout=120s
+kubectl describe pod web
 ```
 
-Inspect the Pod:
-
-```bash
-kubectl describe pod nginx-imperative
-```
-
-View logs:
-
-```bash
-kubectl logs nginx-imperative
-```
 
 Run a command inside the container:
 
 ```bash
-kubectl exec nginx-imperative -- nginx -v
+kubectl exec web -- nginx -v
 ```
 
 Forward a local port to the Pod:
 
 ```bash
-kubectl port-forward pod/nginx-imperative 8080:80
+kubectl port-forward pod/web 8080:80
 ```
 
 Open a second terminal and test the Pod:
@@ -72,7 +61,7 @@ NAME               READY   STATUS    RESTARTS   AGE
 nginx-imperative   1/1     Running   0          ...
 ```
 
-For `kubectl exec nginx-imperative -- nginx -v`:
+For `kubectl exec web -- nginx -v`:
 
 ```text
 nginx version: nginx/...
@@ -87,9 +76,9 @@ Welcome to nginx!
 ## Validation Commands
 
 ```bash
-kubectl get pod nginx-imperative
-kubectl describe pod nginx-imperative
-kubectl logs nginx-imperative
+kubectl get pod web
+kubectl describe pod web
+kubectl logs web
 ```
 
 The Pod should be `Running` and `READY` should be `1/1`.
@@ -101,7 +90,7 @@ The Pod should be `Running` and `READY` should be `1/1`.
 Wait a little longer, then inspect events:
 
 ```bash
-kubectl describe pod nginx-imperative
+kubectl describe pod web
 ```
 
 ### Port 8080 is already in use
@@ -109,7 +98,7 @@ kubectl describe pod nginx-imperative
 Use another local port:
 
 ```bash
-kubectl port-forward pod/nginx-imperative 8081:80
+kubectl port-forward pod/web 8081:80
 curl http://localhost:8081
 ```
 
@@ -122,7 +111,7 @@ Make sure port forwarding is still running in another terminal.
 Delete the Pod:
 
 ```bash
-kubectl delete pod nginx-imperative
+kubectl delete pod web
 ```
 
 Verify deletion:
