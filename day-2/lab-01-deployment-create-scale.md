@@ -4,9 +4,6 @@
 
 Create a Deployment, inspect the ReplicaSet and Pods it manages, and scale the application.
 
-## Estimated Time
-
-60 minutes
 
 ## Prerequisites
 
