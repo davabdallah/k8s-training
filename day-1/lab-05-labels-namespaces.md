@@ -4,16 +4,6 @@
 
 Use namespaces to separate resources and labels to select groups of Pods.
 
-## Estimated Time
-
-60 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You understand basic Pod creation.
-
 ## Step-by-Step Commands
 
 Create two namespaces:
