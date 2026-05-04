@@ -89,9 +89,3 @@ Use this only when you want a fresh cluster:
 minikube delete
 minikube start --driver=docker
 ```
-
-## Notes for Instructors
-
-- Ask students to keep Docker running during the full course.
-- If a lab behaves strangely, first check `minikube status`.
-- If the cluster is broken beyond quick repair, delete and recreate it.
