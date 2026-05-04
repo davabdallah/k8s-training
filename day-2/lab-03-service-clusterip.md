@@ -4,15 +4,6 @@
 
 Expose a Deployment inside the cluster using a ClusterIP Service and test it from another Pod.
 
-## Estimated Time
-
-60 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
 
 ## Step-by-Step Commands
 
