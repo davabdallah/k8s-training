@@ -17,13 +17,13 @@ By the end of Day 3, students should be able to:
 
 Duration: 6 hours
 
-| Time | Topic |
-| --- | --- |
-| 75 min | Ingress and local HTTP routing |
-| 75 min | Liveness and readiness probes |
-| 75 min | PVC storage |
-| 120 min | Mini project implementation |
-| 15 min | Final cleanup |
+| Topic |
+| --- |
+| Ingress and local HTTP routing |
+| Liveness and readiness probes |
+| PVC storage |
+| Mini project implementation |
+| Final cleanup |
 
 ## Labs
 
