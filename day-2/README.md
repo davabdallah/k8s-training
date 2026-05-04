@@ -17,17 +17,15 @@ By the end of Day 2, students should be able to:
 
 ## Agenda
 
-Duration: 6 hours
-
-| Time | Topic |
-| --- | --- |
-| 75 min | Deployments and ReplicaSets |
-| 60 min | Scaling |
-| 75 min | Rolling updates and rollback |
-| 75 min | Services and ClusterIP |
-| 45 min | Service selectors, endpoints, and kube-proxy |
-| 60 min | ConfigMaps and Secrets |
-| 30 min | Review and cleanup |
+| Topic |
+| --- |
+| Deployments and ReplicaSets |
+| Scaling |
+| Rolling updates and rollback |
+| Services and ClusterIP |
+| Service selectors, endpoints, and kube-proxy |
+| ConfigMaps and Secrets |
+| Review and cleanup |
 
 ## Labs
 
