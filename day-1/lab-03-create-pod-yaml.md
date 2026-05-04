@@ -4,10 +4,6 @@
 
 Create a Pod from a YAML manifest and learn how declarative Kubernetes configuration works.
 
-## Estimated Time
-
-50 minutes
-
 ## Prerequisites
 
 - Minikube is running.
@@ -34,11 +30,6 @@ List Pods:
 kubectl get pods
 ```
 
-Wait for the Pod:
-
-```bash
-kubectl wait --for=condition=Ready pod/nginx-yaml --timeout=120s
-```
 
 Inspect the Pod:
 
