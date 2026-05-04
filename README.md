@@ -24,6 +24,8 @@ Required tools:
 - Git
 - VS Code or any editor
 
+For students using Ubuntu inside WSL 2, follow [WSL Ubuntu tool installation](setup/wsl-ubuntu-install.md) before starting Day 1.
+
 ## Day-by-Day Agenda
 
 ### Day 1 - Kubernetes Basics and Pods
@@ -89,6 +91,7 @@ minikube
 
 ### Setup
 
+- [WSL Ubuntu tool installation](setup/wsl-ubuntu-install.md)
 - [Minikube setup](setup/minikube-setup.md)
 - [General troubleshooting](setup/troubleshooting.md)
 

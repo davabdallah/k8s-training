@@ -15,6 +15,8 @@ Start a local Kubernetes cluster with Minikube and verify that kubectl can talk 
 - kubectl is installed.
 - You are in the repository root.
 
+If you are using Ubuntu inside WSL 2 and still need to install kubectl or Minikube, complete [WSL Ubuntu tool installation](../setup/wsl-ubuntu-install.md) before starting this lab.
+
 ## Step-by-Step Commands
 
 Check Docker:
