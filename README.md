@@ -1,8 +1,6 @@
 # Kubernetes 3-Day Instructor-Led Training
 
-Hands-on Kubernetes training for fresh graduate students who already know Linux basics, Docker, Git, and GitHub. This repository is designed for instructor-led labs, student practice, and a final mini project.
-
-No slides are included. Everything here is meant to be run, inspected, broken, fixed, and discussed.
+Hands-on Kubernetes training 
 
 ## Course Overview
 
@@ -13,15 +11,6 @@ Over 3 days, students will learn the daily workflow of working with Kubernetes:
 - Day 3: Ingress, liveness and readiness probes, PVC storage, and a small frontend/backend mini project.
 
 Each lab includes goals, estimated time, commands, expected output, validation, common errors, and cleanup steps.
-
-## Audience
-
-This course is for fresh graduate students who already understand:
-
-- Linux shell basics
-- Docker images and containers
-- Git and GitHub basics
-- Basic networking concepts such as ports, localhost, and HTTP
 
 ## Prerequisites
 
@@ -39,8 +28,6 @@ Required tools:
 
 ### Day 1 - Kubernetes Basics and Pods
 
-Duration: 6 hours
-
 - Course setup and Minikube startup
 - Inspecting cluster state with kubectl
 - Creating Pods imperatively
@@ -50,8 +37,6 @@ Duration: 6 hours
 - Labels, selectors, and namespaces
 
 ### Day 2 - Deployments and Services
-
-Duration: 6 hours
 
 - Creating Deployments
 - Scaling replicas
@@ -64,8 +49,6 @@ Duration: 6 hours
 - Secrets
 
 ### Day 3 - Ingress, Probes, Storage, and Mini Project
-
-Duration: 6 hours
 
 - Ingress controller setup in Minikube
 - Routing HTTP traffic with Ingress
