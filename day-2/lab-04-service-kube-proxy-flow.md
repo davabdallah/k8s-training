@@ -4,15 +4,6 @@
 
 Understand how a Service selects Pods, creates endpoints, and relies on kube-proxy to route traffic inside the cluster.
 
-## Estimated Time
-
-55 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
 
 ## Step-by-Step Commands
 
