@@ -4,16 +4,6 @@
 
 Create a ConfigMap and a Secret, inject them into a Deployment as environment variables, and inspect the result.
 
-## Estimated Time
-
-65 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
-
 ## Step-by-Step Commands
 
 Open the manifests:
