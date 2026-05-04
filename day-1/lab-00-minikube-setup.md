@@ -4,10 +4,6 @@
 
 Start a local Kubernetes cluster with Minikube and verify that kubectl can talk to it.
 
-## Estimated Time
-
-40 minutes
-
 ## Prerequisites
 
 - Docker is installed and running.
