@@ -4,9 +4,6 @@
 
 Create a Pod using a kubectl command, inspect it, view logs, and delete it.
 
-## Estimated Time
-
-45 minutes
 
 ## Prerequisites
 
