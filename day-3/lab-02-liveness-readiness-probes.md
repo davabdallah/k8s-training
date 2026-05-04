@@ -4,15 +4,6 @@
 
 Add liveness and readiness probes to a Deployment and observe how readiness affects traffic availability.
 
-## Estimated Time
-
-70 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
 
 ## Step-by-Step Commands
 
