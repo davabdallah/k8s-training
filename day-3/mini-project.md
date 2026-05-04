@@ -4,9 +4,6 @@
 
 Deploy a small frontend/backend application using Deployments, Services, ConfigMaps, and Ingress.
 
-## Estimated Time
-
-120 minutes
 
 ## Prerequisites
 
