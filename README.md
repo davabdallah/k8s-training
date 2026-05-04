@@ -78,8 +78,8 @@ Duration: 6 hours
 Clone the repository and enter the training directory:
 
 ```bash
-git clone <repo-url>
-cd kubernetes-3-days-training
+git clone https://github.com/davabdallah/k8s-training.git
+cd k8s-training
 ```
 
 Start Minikube with the Docker driver:
