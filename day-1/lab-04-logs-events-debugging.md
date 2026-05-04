@@ -4,9 +4,6 @@
 
 Practice debugging Pods using logs, describe output, events, and common status messages.
 
-## Estimated Time
-
-60 minutes
 
 ## Prerequisites
 
