@@ -1,6 +1,6 @@
 # Minikube Setup
 
-Use this guide before Day 1 if you want to verify that every student's machine is ready.
+ Day 1 to verify that all machines are ready.
 
 ## Required Tools
 
