@@ -4,15 +4,6 @@
 
 Create a PersistentVolumeClaim, mount it into a Pod, write data, recreate the Pod, and confirm that the data remains.
 
-## Estimated Time
-
-70 minutes
-
-## Prerequisites
-
-- Minikube is running.
-- kubectl context is set to `minikube`.
-- You are in the repository root.
 
 ## Step-by-Step Commands
 
