@@ -12,6 +12,8 @@ Install these tools before class:
 - Git
 - VS Code or any editor
 
+If students are using Ubuntu inside WSL 2, install kubectl and Minikube with [WSL Ubuntu tool installation](wsl-ubuntu-install.md) first.
+
 ## Verify Tool Installation
 
 ```bash

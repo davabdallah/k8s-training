@@ -29,6 +29,34 @@ minikube delete
 minikube start --driver=docker
 ```
 
+## WSL Ubuntu Cannot Access Docker
+
+Students using Ubuntu inside WSL 2 must have Docker Desktop running on Windows and WSL integration enabled for Ubuntu.
+
+Check Docker from Ubuntu:
+
+```bash
+docker ps
+```
+
+If it fails, verify Docker Desktop settings:
+
+- Settings > General > Use the WSL 2 based engine
+- Settings > Resources > WSL Integration > Enable Ubuntu
+
+Restart WSL from PowerShell:
+
+```powershell
+wsl.exe --shutdown
+```
+
+Open Ubuntu again and test:
+
+```bash
+docker ps
+minikube start --driver=docker
+```
+
 ## kubectl Cannot Connect
 
 Check the current context:
