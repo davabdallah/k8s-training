@@ -4,10 +4,6 @@
 
 Use kubectl to inspect cluster information, nodes, namespaces, Pods, and Kubernetes API resources.
 
-## Estimated Time
-
-45 minutes
-
 ## Prerequisites
 
 - Minikube is running.
