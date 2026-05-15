@@ -11,8 +11,11 @@ The labs use Docker as the Minikube driver, so Docker must also be available ins
 
 ## Goal
 
-Prepare a WSL Ubuntu machine for the Kubernetes training.
+Prepare a WSL Ubuntu machine for the Kubernetes 3-day training.
 
+## Estimated Time
+
+30 to 45 minutes
 
 ## Prerequisites
 
@@ -49,7 +52,7 @@ Set WSL 2 as the default for future distributions:
 wsl.exe --set-default-version 2
 ```
 
-## 2. Verify Docker on Ubuntu
+## 2. Verify Docker from Ubuntu
 
 Start Docker Desktop on Windows.
 
@@ -67,6 +70,7 @@ Open the Ubuntu terminal and run:
 ```bash
 docker version
 docker ps
+docker info --format '{{.OSType}}'
 ```
 
 Expected output includes:
@@ -79,6 +83,14 @@ Server:
  Engine:
   Version: ...
 ```
+
+Expected output from `docker info --format '{{.OSType}}'`:
+
+```text
+linux
+```
+
+Docker Desktop must be using Linux containers, not Windows containers.
 
 If `docker ps` works, Minikube can use the Docker driver.
 
@@ -124,12 +136,36 @@ Client Version: v1.36...
 
 ## 5. Install Minikube
 
-Install the latest stable Minikube Debian package for x86-64 WSL Ubuntu:
+Check your CPU architecture:
+
+```bash
+uname -m
+```
+
+Expected output is usually one of these:
+
+```text
+x86_64
+```
+
+```text
+aarch64
+```
+
+For `x86_64` or AMD64, install the latest stable Minikube Debian package:
 
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
 sudo dpkg -i minikube_latest_amd64.deb
 rm minikube_latest_amd64.deb
+```
+
+For `aarch64` or ARM64, install the latest stable Minikube Debian package:
+
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_arm64.deb
+sudo dpkg -i minikube_latest_arm64.deb
+rm minikube_latest_arm64.deb
 ```
 
 Verify Minikube:
@@ -149,13 +185,21 @@ minikube version: v...
 Start the local Kubernetes cluster:
 
 ```bash
-minikube start --driver=docker
+minikube start --driver=docker --cpus=2 --memory=4096 --kubernetes-version=v1.36.1
 ```
 
 Expected output includes:
 
 ```text
 Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+```
+
+If startup fails or pods stay pending, check Docker Desktop resource limits and give Docker at least 2 CPUs and 4 GB RAM.
+
+If you do not need a pinned Kubernetes version, you can use the latest Minikube default version instead:
+
+```bash
+minikube start --driver=docker --cpus=2 --memory=4096 
 ```
 
 ## 7. Verify the Cluster
@@ -192,7 +236,7 @@ Add kubectl completion and the short `k` alias:
 ```bash
 echo 'source <(kubectl completion bash)' >> ~/.bashrc
 echo 'alias k=kubectl' >> ~/.bashrc
-echo 'complete -o default -F __start_kubectl k' >> ~/.bashrc
+echo 'complete -o default -F __start_kubectl k 2>/dev/null || true' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -237,7 +281,7 @@ Fix:
 
 ```bash
 docker ps
-minikube start --driver=docker
+minikube start --driver=docker --cpus=2 --memory=4096
 ```
 
 If `docker ps` fails, fix Docker Desktop WSL integration first.
@@ -255,7 +299,7 @@ minikube status
 Start Minikube:
 
 ```bash
-minikube start --driver=docker
+minikube start --driver=docker --cpus=2 --memory=4096
 ```
 
 ### Ubuntu is WSL 1
@@ -286,18 +330,6 @@ Delete the local Minikube cluster:
 
 ```bash
 minikube delete
-```
-
-Remove Minikube from Ubuntu:
-
-```bash
-sudo apt-get remove -y minikube
-```
-
-Remove kubectl from Ubuntu:
-
-```bash
-sudo apt-get remove -y kubectl
 ```
 
 ## References
