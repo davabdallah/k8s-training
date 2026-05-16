@@ -13,9 +13,6 @@ The labs use Docker as the Minikube driver, so Docker must also be available ins
 
 Prepare a WSL Ubuntu machine for the Kubernetes 3-day training.
 
-## Estimated Time
-
-30 to 45 minutes
 
 ## Prerequisites
 
