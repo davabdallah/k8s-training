@@ -22,6 +22,14 @@ Prepare a WSL Ubuntu machine for the Kubernetes 3-day training.
 - Docker Desktop WSL integration is enabled for the Ubuntu distribution.
 - The student can open an Ubuntu terminal.
 
+## 0. Install WSL
+
+Open PowerShell in administrator mode by right-clicking and selecting "Run as administrator", and run this command
+
+```powershell
+wsl.exe -l -v
+```
+
 ## 1. Verify WSL Version
 
 Run this command from PowerShell or Windows Terminal:
@@ -182,7 +190,7 @@ minikube version: v...
 Start the local Kubernetes cluster:
 
 ```bash
-minikube start --driver=docker --cpus=2 --memory=4096 --kubernetes-version=v1.36.1
+minikube start --driver=docker --cpus=2 --memory=2048 --kubernetes-version=v1.36.1
 ```
 
 Expected output includes:
