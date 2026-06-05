@@ -16,6 +16,8 @@ Create a Deployment, inspect the ReplicaSet and Pods it manages, and scale the a
 Open the Deployment manifest:
 
 ```bash
+git clone https://github.com/davabdallah/k8s-training.git
+cd k8s-training
 cat day-2/manifests/deployment.yaml
 ```
 
